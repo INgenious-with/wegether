@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleag.org">
-
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,39 +11,45 @@
     <link rel="stylesheet" href="/css/mypage/my-page/mypage.css">
     <link rel="stylesheet" href="/css/fix/header.css">
     <link rel="stylesheet" href="/css/fix/footer.css">
+    <link rel="stylesheet" href="/css/modal.css">
+
 
   </head>
+  <script th:inline="javascript">
+    console.log([[${myProfile}]]);
+  </script>
   <header th:replace="~{/fix/header :: #header}"></header>
   <body>
-  <form th:action="@{/mypage/setting/set-profile}" method="post" th:object="${memberVO}" name="writeForm">
+  <form class="formtag" th:action="@{/mypage/setting/set-profile}" method="post" th:object="${memberVO}" name="writeForm">
     <div class="waccount-wrap">
       <div id="waccountContainer">
         <h3>프로필 정보 설정</h3>
         <div id="tabContent1" class="tab-content">
-          <h5>프로필 사진</h5>
-          <div class="profileimg-wrap">
-            <button
-              type="button"
-              id="resultProfileImg"
-              class="profileimg"
-              onclick="$('#uploadProfileImg').click();"
-            >
-              <img id="profile_image"  class="thumbnail"  style="background-image:url(https://static.wadiz.kr/assets/icon/profile-icon-6.png)"/>
 
-
-            </button>
-
-            <p class="setting-profileimg">
-              <input type="file" class="upload" id="file_input" style="display: none;">
-              <button type="button" onclick="$('#uploadProfileImg').click()" class="file_upload_btn" id="btn_updatePhoto">
-                <span>바꾸기</span>
+            <h5>프로필 사진</h5>
+            <div class="profileimg-wrap">
+              <button
+                      type="button"
+                      id="resultProfileImg"
+                      class="profileimg"
+                      onclick="$('#uploadProfileImg').click();"
+              >
+                <em
+                        style="
+                  background-image: url(https://static.wadiz.kr/assets/icon/profile-icon-6.png);
+                "
+                ></em>
               </button>
-              <button type="button" class="file-delete-btn"  id="btn_deletePhoto">삭제</button>
-<!--              onclick="deletePhoto()"-->
-            </p>
-          </div>
+              <p class="setting-profileimg">
+                <button type="button" id="btn_updatePhoto">
+                  <span>바꾸기</span>
+                </button>
+                <button type="button"  id="btn_deletePhoto">삭제</button>
+              </p>
+            </div>
 
-<!--          <h5>관심사</h5>-->
+
+            <!--          <h5>관심사</h5>-->
 <!--          <p class="sub-text">최소 5개 이상 관심사를 선택해주세요.</p>-->
 <!--          <div class="check-list-wrap">-->
 <!--            <ul>-->
@@ -120,7 +126,8 @@
                 class="input-text"
                 maxlength="20"
                 placeholder="학교"
-                th:field="*{memberSchool}"
+                name="memberSchool"
+                th:value="${myProfile.memberSchool}"
               />
             </li>
             <li>
@@ -129,7 +136,8 @@
                 class="input-text"
                 maxlength="20"
                 placeholder="전공"
-                th:field="*{memberMajor}"
+                name="memberMajor"
+                th:value="${myProfile.memberMajor}"
 
               />
             </li>
@@ -137,17 +145,17 @@
 
           <h5>간단한 한 마디로 나를 소개해주세요</h5>
           <div class="textarea-wrap">
-            <textarea id="introduceme" maxlength="80" th:field="*{memberIntroducing}"></textarea>
+            <textarea id="memberIntroducing" maxlength="80" name="memberIntroducing" th:field="${myProfile.memberIntroducing}"></textarea>
           </div>
           <div class="btn-bottom">
             <ul class="btn-div2">
               <li>
-                <button type="button" class="wz button gray btn-darkgray" onclick="cancelModify()">
+                <button type="button" class="wz button gray btn-darkgray" onclick="location.href='/mypage/main'" ;>
                   취소
                 </button>
               </li>
               <li>
-                <button type="button" class="wz button primary btn-mint changeProfile" onclick="modify()">
+                <button type="button" class="wz button primary btn-mint changeProfile">
                   확인
                 </button>
               </li>
@@ -156,10 +164,43 @@
         </div>
       </div>
     </div>
+
 <!--    <input type="file" id="uploadProfileImg" class="file-profileimg" accept="image/*" />-->
   </form>
+  <footer th:replace="~{/fix/footer :: #footer}"></footer>
+
   </body>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="/js/mypage/setting/set-profile.js"></script>
+  <script src="/js/modal.js"></script>
 
-</html>
+
+
+  <script>
+    console.log("$(\"#btn_updatePhoto\")");
+    console.log("들어옴");
+    console.log("$(\"#btn-darkgray\")")
+
+  $("#btn_updatePhoto").on("click", function(){
+      console.log("사진 버튼 들어옴")
+      showWarnModal('서비스 준비중입니다.');
+  })
+
+
+  $("#btn_deletePhoto").on("click", function(){
+    console.log("취소 버튼 들어옴")
+  showWarnModal('서비스 준비중입니다.');
+  })
+
+
+    $(".changeProfile").on("click", function(){
+      showWarnModal('저장되었습니다.');
+    })
+
+  $(".changeProfile").on('click', function(){
+     $(".formtag").submit();
+  })
+
+</script>
+
+  </html>

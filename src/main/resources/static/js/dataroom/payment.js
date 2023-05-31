@@ -28,8 +28,8 @@ $(function () {
     $("#payPointUse").val("");
 
     //  적립 포인트
-    // th:value="${dataDTO.dataPrice * 0.1}"
-    // $("input:"name=pointHistory")
+    // "${(int)(dataDTO.dataPrice * 0.1)}"
+    $("#getHistory").val(parseInt(dataDTO.dataPrice * 0.1));
 
 
     // checkbox => agreeAll

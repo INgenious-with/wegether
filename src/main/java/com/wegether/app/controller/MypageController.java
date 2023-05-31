@@ -238,7 +238,7 @@ public class MypageController {
 
 
     @GetMapping("/my-page/my-data-list")
-    public void goToData(HttpSession session, Long id, Model model) {
+    public void goToData(Model model) {
         model.addAttribute("datas", mine.readMine((Long) session.getAttribute("id")));
     }
 
@@ -386,21 +386,28 @@ public class MypageController {
 
 
 
+
+
     //    프로필 사진 수정
 //    mypage/setting/set-profile
+
+
     @GetMapping("/setting/set-profile")
-    public void goToSetProfileForm(MemberVO memberVO) {
-        memberVO.setId((Long) session.getAttribute("id"));
+    public void goToSetProfileForm(MemberVO memberVO, Model model) {
+//        memberVO.setId((Long) session.getAttribute("id"));
+        model.addAttribute("myProfile", accountService.getMemberById((Long) session.getAttribute("id")).get());
 
     }
 
     @PostMapping("/setting/set-profile")
     public RedirectView setProfile(MemberVO memberVO) {
         Long id = (Long) session.getAttribute("id");
+
         memberVO.setId(id);
 
-        accountService.setProfile(memberVO);
-        return new RedirectView("/mypage/my-page");
+        mine.modifyProfile(memberVO);
+
+        return new RedirectView("/mypage/main");
 
 
     }

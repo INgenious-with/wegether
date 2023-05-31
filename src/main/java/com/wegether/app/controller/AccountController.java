@@ -65,12 +65,19 @@ public class AccountController {
 
     //    로그인
     @GetMapping("login")
-    public void goToLoginForm(MemberVO memberVO, RedirectAttributes redirectAttributes, @RequestParam(required = false) String withdraw, Model model){
+    public void goToLoginForm(MemberVO memberVO, RedirectAttributes redirectAttributes, @RequestParam(required = false) String withdraw, @RequestParam(required = false) String location,
+                               HttpSession session,Model model){
+        if(location != null){
+            session.setAttribute("location", location);
+        }
+
+
        model.addAttribute("naverWithdraw", withdraw) ;}
 
     @PostMapping("login")
-    public RedirectView login(String memberId, String memberPassword, String list, String id, HttpSession session, RedirectAttributes redirectAttributes){
+    public RedirectView login(String memberId, String memberPassword, HttpSession session, RedirectAttributes redirectAttributes){
         Optional<Long> foundMember = accountService.login(memberId, memberPassword);
+
 
         //카카오나 네이버 계정으로 일반로그인했을 때
         if(foundMember.isPresent()) {
@@ -102,18 +109,8 @@ public class AccountController {
         if(foundMember.isPresent()){
             session.setAttribute("id", foundMember.get());
             //등록하기 폼으로 바로 이동
-            if(list != null){
-                if(list.equals("1")){
-                    return new RedirectView("/consults/register");
-                }
-
-                if(list.equals("2") && id != null){
-                    return new RedirectView("/consults/detail?id=" + id);
-                }
-
-                if(list.equals("3")){
-                    return new RedirectView("/mypage/my-page/my-consult-detail");
-                }
+            if(session.getAttribute("location") != null){
+                return new RedirectView(session.getAttribute("location").toString());
             }
 
             return new RedirectView("/index/main");

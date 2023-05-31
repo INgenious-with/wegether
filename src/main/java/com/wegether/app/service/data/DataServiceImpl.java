@@ -110,11 +110,15 @@ public class DataServiceImpl implements DataService {
     public void fileRemove(Long id){
         dataFileDAO.delete(id);
     };
-//      결제 완료 - member point
+
+//      결제 완료 member point 사용
     @Override
     public void modifyPoint(Long memberId, Long payPointUse) {
         payDAO.updatePoint(memberId, payPointUse);
     }
+
+    //  결제 완료  member point 적립
+    public void modifyMemberPointPlus(Long memberId, Long getHistory) {payDAO.updateMemberPointPlus(memberId, getHistory);}
 
     //  결제 완료 insert point
 //    적립

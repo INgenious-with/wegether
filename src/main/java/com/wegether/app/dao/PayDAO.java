@@ -15,8 +15,11 @@ public class PayDAO {
     //  결제 완료 insert pay
     public void savePay(PayVO payVO) {payMapper.insertPay(payVO);}
 
-    //  결제 완료 memberPoint
+    //  결제 완료 member Point 사용
     public void updatePoint(Long memberId, Long payPointUse) {payMapper.updateMemberPoint(memberId, payPointUse); }
+
+    //  결제 완료  member point 적립
+    public void updateMemberPointPlus(Long memberId, Long getHistory) {payMapper.updateMemberPointPlus(memberId, getHistory);};
 
     //  결제 완료 insert point (적립)
     public void savePoint(PointVO pointVO){payMapper.insertPoint(pointVO) ; }

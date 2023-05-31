@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    const $ul = $("ul");
+    const $ul = $("ul.CardList_container__39oS4");
 
     let text = "";
 

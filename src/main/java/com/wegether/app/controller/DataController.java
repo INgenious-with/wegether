@@ -31,7 +31,6 @@ public class DataController {
     private final AccountService accountService;
     private final HttpSession httpSession;
 
-
 //    자료 목록 - 기본
 //    @GetMapping("list")
 //    public void goToDataList(DataPagination dataPagination, CategoryType categoryType, @RequestParam(defaultValue = "all") String type, @RequestParam(defaultValue = "new") String order, Model model){
@@ -67,9 +66,6 @@ public class DataController {
         model.addAttribute("dataDTO", dataService.read(id).get());
     }
 
-//    자료 등록
-//    @GetMapping("register")
-//    public void goToWriteForm(DataDTO dataDTO, Model model){; }
 
     //    자료 등록 - HttpSession session
     @GetMapping("register")
@@ -87,7 +83,8 @@ public class DataController {
         dataService.write(dataDTO);
         return new RedirectView("/datas/list");
     }
-    
+
+
 //    자료 결제 페이지
     @GetMapping("payment")
     public void goToPayment(@RequestParam Long dataId, Model model, PayVO payVO, HttpSession session, DataDTO dataDTO){
@@ -95,27 +92,20 @@ public class DataController {
         Long memberId = (Long)httpSession.getAttribute("id");
         MemberVO member = accountService.getMemberById(memberId).get();
 
-
         model.addAttribute("dataDTO", readDataPay);
         model.addAttribute("memberId", member);
-
-
-
     }
 
 //      결제 완료 - insert pay + update memberPoint + insert point
     @PostMapping("payment")
     @Transactional(rollbackFor = Exception.class)
-    public RedirectView completePay(PayVO payVO, Long payPointUse, PointVO pointVO) {
+    public RedirectView completePay(PayVO payVO, Long payPointUse, PointVO pointVO, Long getHistory) {
         Long memberId = (Long)httpSession.getAttribute("id");
         pointVO.setDataId(payVO.getDataId());
         dataService.completePay(payVO);
         dataService.modifyPoint(memberId, payPointUse);
+        dataService.modifyMemberPointPlus(memberId, getHistory);
         dataService.getPoint(pointVO);
-
-//        int i = (int)(Math.floor(pointVO.getPointHistory()));
-//        Long changeFormat = Long.valueOf(i);
-//        pointVO.setPointHistory(changeFormat);
 
         if(payPointUse != 0){
             dataService.usePoint(pointVO);
@@ -126,25 +116,25 @@ public class DataController {
 
 
 //    찜하기
-    @GetMapping("do-wish")
+    @GetMapping("do-wish/{dataId}")
     @ResponseBody
-    public void doWish(Long dataId){
+    public void doWish(@PathVariable Long dataId){
         Long id = (Long) httpSession.getAttribute("id");
         dataService.doWish(id, dataId);
     }
 
 //    찜하기 취소
-    @GetMapping("do-not-wish")
+    @GetMapping("do-not-wish/{dataId}")
     @ResponseBody
-    public void doNotWish(Long dataId){
+    public void doNotWish(@PathVariable Long dataId){
         Long id = (Long) httpSession.getAttribute("id");
         dataService.doNotWish(id, dataId);
     }
 
 //    찜 검사
-    @GetMapping("wish")
+    @GetMapping("wish/{dataId}")
     @ResponseBody
-    public boolean checkMyWish(Long dataId){
+    public boolean checkMyWish(@PathVariable Long dataId){
         Long id = (Long) httpSession.getAttribute("id");
         return dataService.getWishId(id, dataId) != null;
     }

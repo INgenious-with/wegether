@@ -1170,6 +1170,7 @@ li {
   .RecommendationStoreCard_thumbnailPlaceholder__3TTOS {
   position: relative;
   overflow: hidden;
+  min-height:150px;
 }
 
 .RecommendationStoreCard_item__3iMMQ
@@ -1698,6 +1699,7 @@ video {
 .preview{
   height: 100%;
   width: 100%;
+  position:absolute;
 }
 
 .CardType_projectCard__3xhjb.CardType_earlybirdCard__1t1n1 .CardType_cardContent__3UMOr {

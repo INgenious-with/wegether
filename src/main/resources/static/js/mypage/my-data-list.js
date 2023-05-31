@@ -50,7 +50,7 @@ $(document).ready(function(){
 
                   </dd>
                   <dd class="PurchaseSummaryCard_description__245z_">
-                    <span class="PurchaseSummaryCard_makerName__1n7dA">${data.dataPrice}</span>
+                    <span class="PurchaseSummaryCard_makerName__1n7dA">${data.dataPrice}원</span>
                   </dd>
                 </dl>
               </div>

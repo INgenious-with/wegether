@@ -76,7 +76,7 @@ $(document).on('click', '.register-again-reply', function () {
     if(session == null){
         showWarnModal("로그인후 이용해주세요");
         $('.modal').on("click", function () {
-            location.href = `/accounts/login?list=2&id=${consultingId}`;
+            location.href = `/accounts/login?location=/consults/detail?id=${consultingId}`;
         })
         return;
     }
@@ -907,7 +907,7 @@ $(function () {
         if (session == null) {
             showWarnModal("로그인 후 이용해주세요");
             $('.modal').on("click", function () {
-                location.href = `/accounts/login?list=2&id=${consultingId}`;
+                location.href = `/accounts/login?location=/consults/detail?id=${consultingId}`;
             })
             return
         }

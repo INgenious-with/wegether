@@ -53,7 +53,10 @@ public class ConsultController {
 
     @GetMapping("detail")
     public void goToConsultingDetail(@RequestParam Long id, ConsultReplyDTO consultReplyDTO, Pagination pagination, Search search, Model model){
-//        프로필 정보가진 아이디 보내기
+        //도착하면초기화
+        session.setAttribute("location", "/index/main");
+        
+        //        프로필 정보가진 아이디 보내기
         if(session.getAttribute("id") != null){
             model.addAttribute("memberVO", accountService.getMemberById((Long)session.getAttribute("id")).get());
         }

@@ -3,11 +3,11 @@ $(document).ready(function() {
     searchproject.forEach(project => {
         text += `
                     <div class="preview">
-                        <a href=""></a>
+                        <a href="/project/detail?id=${project.id}">
                 `
         project.files.forEach(file => {
             if (file.fileType == "REPRESENTATIVE") {
-                text += `<img src="/files/display?fileName=${file.filePath}/t_${file.fileUuid}_${file.fileName}">`;
+                text += `<img style="height:300px" src="/files/display?fileName=${file.filePath}/t_${file.fileUuid}_${file.fileName}">`;
             }
         })
         text += `
@@ -19,6 +19,7 @@ $(document).ready(function() {
                                 <span>${project.projectMajor}</span>
                             </small>
                             </p>
+                            </a>
                     </div>
                 `
     });
@@ -26,8 +27,9 @@ $(document).ready(function() {
 
     $(".preview").css({
         "width": "30%",
-        "height": "100px",
-        "margin-bottom": "50px"
+        "height": "100%",
+        "margin-bottom": "50px",
+        "margin-right" : "30px"
 
     });
 

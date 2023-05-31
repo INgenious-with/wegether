@@ -17,7 +17,7 @@
     <section class="OrderListPage_container__PZnPd">
       <h2>나의 자료</h2>
       <div class="SatisfactionFilter_container__1q2UL">
-        <div class="select-menu small SatisfactionFilter_selectBox__1SsgP">
+        <div class="select-menu small SatisfactionFilter_selectBox__1SsgP" style="visibility: hidden">
           <div class="css-2b097c-container">
             <span
               aria-live="polite"
@@ -25,10 +25,7 @@
               aria-relevant="additions text"
               class="css-7pg0cj-a11yText"
             ></span>
-            <div class="select-menu__control css-yk16xz-control">
-              <div
-                class="select-menu__value-container select-menu__value-container--has-value css-1hwfws3"
-              >
+            <div class="select-menu__control css-yk16xz-control" style="visibility: hidden">
                 <div class="select-menu__single-value css-1uccc91-singleValue">전체</div>
                 <input
                   id="react-select-4-input"
@@ -96,11 +93,11 @@
 
   </body>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script th:inline="javascript">
-    let datas = [[${datas}]];
-    console.log(datas);
-  </script>
   <script src="/js/mypage/my-data-list.js"></script>
-  <script src="/js/mypage/project/list.js"></script>
+
+  <script th:inline="javascript">
+  let datas = [[${datas}]];
+  console.log(datas);
+  </script>
 </html>
 

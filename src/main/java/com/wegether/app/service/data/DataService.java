@@ -38,8 +38,11 @@ public interface DataService {
     //  결제 완료 - insert pay
     public void completePay(PayVO payVO);
 
-    //  결제 완료 - member point
+    //  결제 완료 - member point 사용
     public void modifyPoint(Long memberId, Long payPointUse);
+
+    //  결제 완료  member point 적립
+    public void modifyMemberPointPlus(Long memberId, Long getHistory) ;
 
     //  결제 완료 insert point
 //    적립

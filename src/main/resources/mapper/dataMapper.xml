@@ -83,8 +83,8 @@
 
     <!--찜하기-->
     <insert id="insertWish">
-        INSERT TBL_WISH_DATA
-        VALUES(#{memberId}, #{dataId})
+        INSERT INTO TBL_WISH_DATA
+        VALUES(SEQ_WISH_DATA.NEXTVAL,#{memberId}, #{dataId})
     </insert>
 
     <!--찜하기 취소-->
@@ -94,7 +94,7 @@
     </delete>
 
     <!--찜한 자료 검사-->
-    <select id="selectWish">
+    <select id="selectWish" resultType="long">
         SELECT ID FROM TBL_WISH_DATA
         WHERE MEMBER_ID = #{memberId} AND DATA_ID = #{dataId}
     </select>

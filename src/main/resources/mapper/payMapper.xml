@@ -16,6 +16,15 @@
         WHERE ID = #{memberId}
     </update>
 
+
+    <!--  결제 member update  -->
+    <update id="updateMemberPointPlus">
+        UPDATE TBL_MEMBER
+        SET MEMBER_POINT = MEMBER_POINT + #{getHistory}
+        WHERE ID = #{memberId}
+    </update>
+
+
     <!--  결제 point insert  -->
     <!--  적립  -->
     <insert id="insertPoint">

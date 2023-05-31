@@ -10,8 +10,11 @@ public interface PayMapper {
     //  결제 완료 insert
     public void insertPay(PayVO payVO);
 
-    //  결제 완료 member update
+    //  결제 완료 member point 사용
     public void updateMemberPoint(Long memberId, Long payPointUse);
+
+    //  결제 완료  member point 적립
+    public void updateMemberPointPlus(Long memberId, Long getHistory);
 
     //  결제 완료 insert point
 //    적립

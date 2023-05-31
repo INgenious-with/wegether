@@ -3283,3 +3283,9 @@ button:not(:disabled) {
 .inner-contents blockquote.type-default::after{
     display: none;
 }
+
+
+/* 하트버튼 color */
+#wishlist-btn .withIcon_icon__3VTbq.selected path {
+    fill: #fe3636;
+}

@@ -43,7 +43,7 @@
 
 <!--    세션 맴버 아이디로 아이디 찾기-->
     <select id="selectById" resultType="memberVO">
-        SELECT ID, MEMBER_ID, MEMBER_PASSWORD, MEMBER_NAME, MEMBER_NICKNAME, MEMBER_PHONE_NUMBER, MEMBER_STATUS, MEMBER_GRADE, MEMBER_LOGIN_STATUS, FILE_NAME, SNS_PROFILE, MEMBER_POINT
+        SELECT ID, MEMBER_ID, MEMBER_PASSWORD, MEMBER_NAME, MEMBER_NICKNAME, MEMBER_SCHOOL, MEMBER_MAJOR, MEMBER_INTRODUCING, MEMBER_PHONE_NUMBER, MEMBER_STATUS, MEMBER_GRADE, MEMBER_LOGIN_STATUS, FILE_NAME, SNS_PROFILE, MEMBER_POINT
         FROM TBL_MEMBER
         WHERE ID = #{id}
     </select>
@@ -58,8 +58,8 @@
 <!--    마이페이지 프로필-->
     <update id="updateProfile">
         UPDATE TBL_MEMBER
-        SET MEMBER_SCHOOL=#{memberSchool}, MEMBER_MAJOR=#{memberMajor}, MEMBER_INTRODUCING=#{memberIntroducing}, FILE_PATH=#{filePath}, FILE_UUID=#{fileUuid}, FILE_NAME=#{fileName}, FILE_SIZE=#{fileSize}
-        WHERE MEMBER_ID=#{memberId}
+        SET MEMBER_SCHOOL=#{memberSchool}, MEMBER_MAJOR=#{memberMajor}, MEMBER_INTRODUCING=#{memberIntroducing}
+        WHERE id=#{id}
     </update>
 
 

@@ -49,7 +49,7 @@ $('.my-consult-list').on("click", function (e) {
     if(id ==null){
         showWarnModal("로그인 후 이용해주세요")
         $('.modal').on("click", function () {
-            location.href=`/accounts/login?list=3`;
+            location.href=`/accounts/login?location=/mypage/my-page/my-consult-detail`;
         })
     }else{
         location.href=`/mypage/my-page/my-consult-detail`;

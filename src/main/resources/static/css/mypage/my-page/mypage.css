@@ -605,7 +605,7 @@ var {
     position: sticky;
     z-index: 99;
     top: 56px;
-    background: #00c4c4;
+    background: #00BBFF;
 }
 
 @media screen and (min-width: 1097px) {
@@ -1260,14 +1260,14 @@ a.Button_button__1HNjI.Button_block__3-IpL {
 }
 
 .Button_button__1HNjI.Button_primary__2kq3x {
-    border-color: #00c4c4;
+    border-color: #00BBFF;
     color: #00a2a2;
 }
 
 @media (hover: hover) and (pointer: fine) {
     .Button_button__1HNjI.Button_primary__2kq3x.Button_hover__2ME7l,
     .Button_button__1HNjI.Button_primary__2kq3x:hover {
-        border-color: #00c4c4;
+        border-color: #00BBFF;
         background-color: #e7f9f9;
     }
 }
@@ -1276,13 +1276,13 @@ a.Button_button__1HNjI.Button_block__3-IpL {
 .Button_button__1HNjI.Button_primary__2kq3x:active,
 .Button_button__1HNjI.Button_primary__2kq3x.Button_active__3V7A2 {
     text-decoration: none;
-    border-color: #00c4c4;
+    border-color: #00BBFF;
     background-color: #e7f9f9;
 }
 
 .Button_button__1HNjI.Button_primary__2kq3x.Button_contained__1Lx6c {
-    border-color: #00c4c4;
-    background-color: #00c4c4;
+    border-color: #00BBFF;
+    background-color: #00BBFF;
     color: #fff;
 }
 
@@ -1801,6 +1801,7 @@ a.Button_button__1HNjI.Button_block__3-IpL {
 }
 
 .MyWadizSupporterProjectInfo_container__3MC9F {
+    cursor:pointer;
     position: relative;
     flex: 1;
 }
@@ -1904,7 +1905,7 @@ a
     display: flex;
     align-items: center;
     height: 18px;
-    color: #00c4c4;
+    color: #00BBFF;
     font-weight: 500;
     line-height: 18px;
     letter-spacing: 0;
@@ -2048,7 +2049,7 @@ a
     font-weight: 700;
     text-align: right;
     word-break: break-all;
-    color: #00c4c4;
+    color: #00BBFF;
 }
 
 @media screen and (min-width: 1097px) {
@@ -2844,7 +2845,7 @@ a.MyWadizMyProject_info__1rRr9 svg {
     right: 24px;
     width: 24px;
     height: 24px;
-    fill: #00c4c4;
+    fill: #00BBFF;
 }
 
 .MyWadizMakerPageSelectModal_addButton__B88Vc {
@@ -2992,7 +2993,7 @@ a.MyWadizMyProject_info__1rRr9 svg {
     top: 0;
     left: 0;
     border-radius: 3px;
-    background-color: #00c4c4;
+    background-color: #00BBFF;
     height: 100%;
 }
 
@@ -3556,7 +3557,7 @@ a.MyWadizMyProject_info__1rRr9 svg {
         position: absolute;
         top: 0;
         left: 0;
-        background: #00c4c4;
+        background: #00BBFF;
         width: 100%;
         height: 220px;
     }
@@ -3566,7 +3567,7 @@ a.MyWadizMyProject_info__1rRr9 svg {
         position: absolute;
         top: 0;
         left: 0;
-        background: #00c4c4;
+        background: #00BBFF;
         width: 100%;
         height: 220px;
         content: '';
@@ -3686,4 +3687,15 @@ a.MyWadizMyProject_info__1rRr9 svg {
     border-right: 0.1px solid rgba(0, 0, 0, 0.15);
     margin-left: 60px;
     margin-right: 100px;
+}
+
+.MyWadizEventBanner_banner__2PC1U svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+    width: 70px;
+    height: 78px;
+    float: right;
+    border-color: white;
+    padding-top: 2%;
+    padding-left: 2%;
 }

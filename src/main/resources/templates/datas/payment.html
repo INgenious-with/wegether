@@ -93,7 +93,7 @@
 						<form th:action="@{/datas/payment}" method="post" name="payment-submit" id="payment-submit">
 							<input type="hidden" name="dataId" th:value="*{id}" >
 							<input type="hidden" name="memberId" th:value="${memberId.id}" >
-							<input type="hidden" name="getHistory" value="100">
+							<input type="hidden" name="getHistory" value="" id="getHistory">
 <!--							<input type="hidden" name="pointHistory" th:value="payPointUse">-->
 
 

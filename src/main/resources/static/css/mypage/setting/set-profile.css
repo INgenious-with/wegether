@@ -513,12 +513,12 @@ i.icon::before,
 }
 
 .wz.button.primary {
-  background-color: #00c4c4;
+  background-color: #00BBFF;
   color: #fff;
 }
 .wz.button.primary,
 .wz.button.primary-outline {
-  border-color: #00c4c4;
+  border-color: #00BBFF;
 }
 
 .wz.button.gray {
@@ -556,7 +556,7 @@ label.wz.radio > span::after {
   left: 3px;
   opacity: 0;
   border-radius: 50%;
-  background-color: #00c4c4;
+  background-color: #00BBFF;
   width: 14px;
   height: 14px;
   content: '';

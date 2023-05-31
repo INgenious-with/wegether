@@ -12,7 +12,7 @@ $registerButton.on("click", function () {
     if (session == null) {
         showWarnModal("<span>로그인 후</span><span>이용해주세요.</span>");
         $('.modal').on("click", () => {
-            location.href = '/accounts/login?list=1';
+            location.href = '/accounts/login?location=/consults/register';
         })
     } else {
         location.href = '/consults/register';
