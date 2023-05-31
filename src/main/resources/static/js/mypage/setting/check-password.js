@@ -21,7 +21,7 @@ $button.on('click', function() {
             console.log(data);
             if(data==$input.val()){
                 console.log("비밀번호 맞음");
-                location.href="/mypage/setting/basic-setting";
+                location.href="/mypage/setting/setting-password";
                 $button.submit();
 
             }

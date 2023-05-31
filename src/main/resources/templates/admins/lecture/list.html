@@ -26,7 +26,7 @@
 
             <div class="info-title-box info-title-box-flex">
                 <div class="logo-box-layout">
-                    <div class="logo-box">
+                    <div class="logo-box" onclick="location.href='/index/main'">
                         <img src="/image/admin/wegether.svg" style="padding-top: 17px" />
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                                 <div class="delete-box-layout">
                                     <div class="delete-box">
                                         <button class="register-button">
-                                            <a href="../../lectures/register.html">강연 등록</a>
+                                            <a th:href="@{/lectures/register}">강연 등록</a>
                                         </button>
                                     </div>
                                 </div>

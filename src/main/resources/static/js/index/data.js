@@ -9,7 +9,7 @@ $(document).ready(function() {
             <li class="TabContainer_listItem__2nO5j">
                 <div>
                     <a class="CardType_projectCard__3xhjb CardType_projectCardA__33rbP"
-                        href="/datas/detail?id=${datard.id}"
+                        href="/datas/detail?id=${data.id}"
                         data-ec-list="홈_실시간랭킹_펀딩" data-ec-id="190430"
                         data-ec-name="1.5억 업그레이드 펀딩ㅣ재테크책 100권 압축ㅣ트라이앵글 이론 2023"
                         data-ec-position="0" data-ec-category="출판"

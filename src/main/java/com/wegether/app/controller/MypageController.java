@@ -89,7 +89,7 @@ public class MypageController {
     public RedirectView changePassword(MemberVO memberVO, HttpSession session) {
         log.info(memberVO.getMemberPassword());
         accountService.changePassword((Long) session.getAttribute("id"), memberVO.getMemberPassword());
-        return new RedirectView("/mypage/my-page/my-page");
+        return new RedirectView("/mypage/setting");
     }
 
 //===========================================================================================================================
@@ -333,7 +333,7 @@ public class MypageController {
     @ResponseBody
     public List<HeartDTO> goToAllHearts(Long memberId) {
 
-        final List<HeartDTO> hearts = heart.allHearts(2L);
+        final List<HeartDTO> hearts = heart.allHearts((Long)session.getAttribute("id"));
 //        log.info(String.valueOf(hearts));
         return hearts;
 
@@ -346,7 +346,7 @@ public class MypageController {
     @ResponseBody
     public List<ProjectDTO> goToProjectHeart() {
 
-        final List<ProjectDTO> projects = heart.projectHeart(2L);
+        final List<ProjectDTO> projects = heart.projectHeart((Long)session.getAttribute("id"));
         log.info(String.valueOf(projects));
         return projects;
 
@@ -359,7 +359,7 @@ public class MypageController {
     @ResponseBody
     public List<DataDTO> goToDataHeart(Long memberId) {
 
-        final List<DataDTO> datas = heart.dataHeart(2L);
+        final List<DataDTO> datas = heart.dataHeart((Long)session.getAttribute("id"));
         log.info(String.valueOf(datas));
         return datas;
 
