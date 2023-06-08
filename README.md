@@ -1,6 +1,6 @@
 <h1>인구감소에 따른 대학교 통합 커뮤니티 사이트 - 'Wegether'</h1>
 
-
+<br>
 <h2>1. 기획 의도</h2>
 
 ![기획배경](https://github.com/Developer-Kimchi/wegether/assets/129861604/a9cb20a7-c88a-4ab3-816d-cc3c331566a3)
@@ -13,7 +13,7 @@
 
 </div>
 
-
+<br>
 <h2>2. 기대 효과</h2>
 
 ![기대효과](https://github.com/Developer-Kimchi/wegether/assets/129861604/b78bc307-c3d5-4f04-aece-9728c434b938)
@@ -25,7 +25,7 @@ Wegether는 아래와 같이 4가지의 기대 효과를 불러일으킬 것으�
 3. 커뮤니케이션 스킬 및 협업 능력 향상<br>
 4. 입시 관련 상담 및 정보 제공으로 인한 입시 스트레스 완화<br>
 
-
+<br>
 <h2>3. 프로젝트 사용 툴</h2>
 - Java<br>
 - Spring<br>
@@ -47,11 +47,14 @@ Wegether는 아래와 같이 4가지의 기대 효과를 불러일으킬 것으�
 - bootpay API<br>
 - Java Mail API<br>
 - Postman<br>
+
+
+<br>
 <h2>4. ERD</h2>
 
 ![wegather erd 완성본](https://github.com/we-gether/wegether/assets/120389213/b7bb414b-14f9-4d79-90a3-b5cfede8198c)
 
-  
+<br>
 <h2>5. 담당 업무</h2>
 
 
@@ -70,6 +73,7 @@ Wegether는 아래와 같이 4가지의 기대 효과를 불러일으킬 것으�
 - 강연 내역 관련(관리자)
 - 회원 관리 관련(관리자)
 
+<br>
 <h2>6. 느낀점</h2>
 <h3>6-1. 어려웠던 부분</h3>
 📌DTO에 LIST를 담는 것에 대한 어려움<br>
