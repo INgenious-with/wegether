@@ -44,7 +44,7 @@ Wegether는 아래와 같이 4가지의 기대 효과를 불러일으킬 것으�
 - JDK 11.0.15<br>
 - Naver DEVELOPER API<br>
 - Kakao DEVELOPER API<br>
-- Bootpay API<br>
+- bootpay API<br>
 - Java Mail API<br>
 - PostMan<br>
 <h2>4. ERD</h2>
