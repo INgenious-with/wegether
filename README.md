@@ -49,7 +49,7 @@ Wegether는 아래와 같이 4가지의 기대 효과를 불러일으킬 것으�
 - PostMan<br>
 <h2>4. ERD</h2>
 
-![wegather erd 완성본 drawio](https://github.com/Developer-Kimchi/wegether/assets/129861604/f6e0aa68-cc8b-4892-a725-62fdd9655031)
+![wegather erd 완성본](https://github.com/we-gether/wegether/assets/120389213/b7bb414b-14f9-4d79-90a3-b5cfede8198c)
 
   
 <h2>5. 담당 업무</h2>
