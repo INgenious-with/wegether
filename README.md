@@ -33,17 +33,17 @@ Wegether는 아래와 같이 4가지의 기대 효과를 예상합니다.
 - Oracle<br>
 - MyBatis<br>
 - Gradle<br>
-- Apachi Tomcat<br>
-- Java Script<br>
+- Apache Tomcat<br>
+- JavaScript<br>
 - jQuery<br>
-- Visual Studio Code<br>
+- VSCode<br>
 - DBeaver<br>
-- git, github<br>
-- Sourcetree<br>
+- git, git hub<br>
+- SourceTree<br>
 - JSON<br>
 - JDK 11.0.15<br>
-- Naver DEVELOPER API<br>
-- Kakao DEVELOPER API<br>
+- Naver Developer API<br>
+- Kakao Developer API<br>
 - bootpay API<br>
 - Java Mail API<br>
 - Postman<br>
@@ -77,15 +77,15 @@ Wegether는 아래와 같이 4가지의 기대 효과를 예상합니다.
 <h2>6. 느낀점</h2>
 <h3>6-1. 어려웠던 부분</h3>
 📌DTO에 LIST를 담는 것에 대한 어려움<br>
-✔ 파일 같은 경우 하나가 아닌 여러개의 정보가 필요하므로 DTO에 LIST로 넣어야 했습니다. 이외에도 중간 테이블에 대한 이해가 있어야 기능 구현이 가능했었기에 관련 내용을 익혀 진행하였습니다.
+✔ 파일 같은 경우 하나가 아닌 여러개의 정보가 필요하므로 DTO에 LIST로 넣어야 했습니다. 이외에도 중간 테이블에 대한 이해가 있어야 기능 구현이 가능했었기에 관련 내용을 열심히 익혔고, 진행할 수 있었습니다.
 <br><br>
 
 📌화면을 구성하는 것에 대한 어려움<br>
-✔게시판 목록은 반복되는 여러개의 데이터를 받아오기 때문에 단순하게 값을 넣어서 화면을 구성할 수 없었습니다. JS 반복문이나 타임리프 반복문을 통하여 화면을 그리는 방법을 익혀 해결하였습니다.
+✔게시판 목록은 반복되는 여러개의 데이터를 받아오기 때문에 단순하게 화면을 구성할 수 없었습니다. JS 반복문이나 타임리프 반복문을 통하여 화면을 그리는 방법을 배워 해결하였습니다.
 <br><br>
 
 📌기획 단계에서의 정확한 설계에 대한 어려움<br>
-✔미흡한 실력이었기에 완벽한 기획이 어려웠으며, 계속해서 컬럼을 고쳐나가면서 작업을 진행하였습니다. 기획과 다르게 설계되는 여러 부분들을 보면서, 기획에 중요성과 어려움에 대하여 깨닫게 되는 시간이었습니다.
+✔미흡한 실력이었기에 완벽한 기획이 어려웠으며, 계속해서 컬럼을 고쳐나가면서 작업을 진행하였습니다. 기획과 다르게 설계되는 여러 부분들을 보면서, 초기 기획에 중요성에 대하여 깨닫게 되는 시간이었습니다.
 <br><br>
 
 <h3>6-2. 총평</h3>
