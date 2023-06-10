@@ -18,7 +18,7 @@
 
 ![기대효과](https://github.com/Developer-Kimchi/wegether/assets/129861604/b78bc307-c3d5-4f04-aece-9728c434b938)
 
-Wegether는 아래와 같이 4가지의 기대 효과를 불러일으킬 것으로 예상합니다.
+Wegether는 아래와 같이 4가지의 기대 효과를 예상합니다.
 
 1. 다양한 전공 관련 자료 접근성 증진에 기인한 대학 수준 상향 평준화<br>
 2. 대학생 커뮤니티 관련 플랫폼 구축<br>
